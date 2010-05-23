@@ -4,6 +4,26 @@
 	src: url('../type/Fontin-Regular.otf');
 }
 
+@font-face {
+	font-family: 'FontinSansRegular';
+	src: url('../type/Fontin_Sans_R_45b.otf');
+}
+
+@font-face {
+	font-family: 'FontinSansBold';
+	src: url('../type/Fontin_Sans_B_45b.otf');
+}
+
+@font-face {
+	font-family: 'Museo100Regular';
+	src: url('../type/Museo100-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Museo300Regular';
+	src: url('../type/Museo300-Regular.otf');
+}
+
 /* @group General */
 
 html, body {
@@ -60,21 +80,6 @@ ul {
 	list-style-position: outside;
 }
 
-a {
-	color: #0599ee;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #0483cc;
-}
-
-a:hover {
-	text-decoration: underline;
-	text-shadow: #fff 0 1px 0;
-	color: #be4518;
-}
-
 section a:link, section a:visited {
 	border-bottom: 1px dotted #BD1550;
 	color: #BD1550;
@@ -107,19 +112,41 @@ hr {
 
 /* @group Navigation */
 
-#navigation_primary ul {
+#nav_wrap {
+	padding-top: 10px;
+}
+
+#nav_primary ul {
 	list-display: none;
 	margin: 0;
 	padding: 0;
 }
 
-#navigation_primary ul li {
+#nav_primary ul li {
 	list-style: none;
 	display: block;
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 143px;
+	margin-left: 40px;
+}
+
+#nav_primary ul li:first-child {
+	margin-left: 0;
+}
+
+#nav_primary ul li a {
+	text-decoration: none;
+	border: 0;
+	font-size: 20px;
+	font-family: "Museo300Regular", sans-serif;
+	color: #666;
+	border-bottom: 1px solid #999;
+}
+
+#nav_primary ul li a:hover {
+	color: #333;
+	border-bottom-color: #666;
 }
 
 /* @end */
@@ -127,19 +154,20 @@ hr {
 /* @group Masthead */
 
 #masthead_wrap {
-	height: 180px;
+	height: 150px;
 	overflow: hidden;
 	width: 100%;
-/*	background: url(../img/masthead_bg.png) repeat-x left 64px;*/
+	background: url(../img/masthead_bg.png) repeat-x left 0;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	background: rgba(255, 255, 255, 0.5);
+/*	background: rgba(255, 255, 255, 0.5);*/
+	border-bottom: 1px solid #888;
 }
 
 #masthead {
 	width: 960px;
-	height: 180px;
+	height: 150px;
 	overflow: hidden;
 	margin: 0 auto;
 	padding: 0;
@@ -147,15 +175,24 @@ hr {
 }
 
 #masthead h1 {
-	margin-top: 65px;
+	margin: 40px 10px 0 10px;
 	float: left;
-	font-size: 48px;
+	font-size: 72px;
+
+	font-family: "FontinSansBold", sans-serif;
 }
 
-#masthead h1 a {
+#masthead h1 a, #masthead h1 a:visited, #masthead h1 a:hover {
 	display: block;
+	color: #0599ee;
+	text-decoration: none;
 /*	text-indent: -9999px;*/
 /*	background: url(../img/masthead_berlin_2010.png) no-repeat right center;*/
+}
+
+#masthead h1 a:hover {
+	text-decoration: none;
+	color: auto;
 }
 
 /* @end */
