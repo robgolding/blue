@@ -34,18 +34,17 @@
 		</div>
 		
 		<div class="container_12 clearfix">
-			<div id="navigation" class="clearfix">
-				<ul class="menu clearfix">
-					<li class="home current"><a href="">Home</a></li>
-					<li class="cv"><a href="cv/">Curriculum Vitae</a></li>
-					<li class="blog"><a href="/blog/">Blog</a></li>
-				</ul>
-				<ul class="contact clearfix">
-					<li class="contact"><a id="noscript" class="disabled" title="Javascript required to view email address">Contact</a>
-						<script language="JavaScript" type="text/JavaScript"> 
-							var noJava=eval('document.getElementById(\'noscript\')')
+			<nav class="clearfix" id="navigation_primary">
+				<ul class="nav">
+					<li id="nav_home"><a href="">Home</a></li>
+					<li id="nav_cv"><a href="">Curriculum Vitae</a></li>
+					<li id="nav_blog"><a href="">Blog</a></li>
+					<li id="nav_contact">
+						<a id="nav_contact_a" class="disabled" title="Javascript required to view email address">Contact</a>
+						<script language="JavaScript" type="text/JavaScript">
+							var noJava=eval('document.getElementById(\'nav_contact_a\')')
 							noJava.style.display = 'none';
-						</script> 
+						</script>
 						<script type="text/javascript">
 							//<![CDATA[
 							<!--
@@ -67,7 +66,7 @@
 						</script>
 					</li>
 				</ul>
-			</div> <!-- /navigation -->
+			</nav>
 		</div> <!-- /container_12 -->
 		
 		<div class="container_12 clearfix">

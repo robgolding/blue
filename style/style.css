@@ -75,6 +75,16 @@ a:hover {
 	color: #be4518;
 }
 
+section a:link, section a:visited {
+	border-bottom: 1px dotted #BD1550;
+	color: #BD1550;
+	text-decoration: none;
+}
+
+section a:hover {
+	border-bottom: 1px solid #BD1550;
+}
+
 strong {
 	font-weight: 700;
 }
@@ -95,16 +105,36 @@ hr {
 
 /* @end */
 
+/* @group Navigation */
+
+#navigation_primary ul {
+	list-display: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation_primary ul li {
+	list-style: none;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 143px;
+}
+
+/* @end */
+
 /* @group Masthead */
 
 #masthead_wrap {
 	height: 180px;
 	overflow: hidden;
 	width: 100%;
-	background: url(../img/masthead_bg.png) repeat-x left 64px;
+/*	background: url(../img/masthead_bg.png) repeat-x left 64px;*/
 	margin: 0;
 	padding: 0;
 	position: relative;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 #masthead {
@@ -117,9 +147,7 @@ hr {
 }
 
 #masthead h1 {
-	margin-top: 90px;
-	height: 99px;
-	width: 479px;
+	margin-top: 65px;
 	float: left;
 	font-size: 48px;
 }
@@ -127,8 +155,6 @@ hr {
 #masthead h1 a {
 	display: block;
 /*	text-indent: -9999px;*/
-	width: 479px;
-	height: 99px;
 /*	background: url(../img/masthead_berlin_2010.png) no-repeat right center;*/
 }
 
