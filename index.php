@@ -6,7 +6,7 @@
 			<?php $first = true; ?>
 			
 			<?php while (have_posts()) : the_post(); ?>
-				<section class="grid_8" id="post-<?php the_ID(); ?>">
+				<section class="grid_8 post" id="post-<?php the_ID(); ?>">
 					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 					<p class="meta"><?php the_time('F jS, Y') ?> by <strong><?php the_author() ?></strong></p>
 

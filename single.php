@@ -4,7 +4,7 @@
 		<?php if (have_posts()) : ?>
 			
 			<?php while (have_posts()) : the_post(); ?>
-				<section class="grid_8" id="post-<?php the_ID(); ?>">
+				<section class="grid_8 post" id="post-<?php the_ID(); ?>">
 					<h1><?php the_title(); ?></h1>
 					
 					<?php the_content('Read the rest of this entry &raquo;'); ?>
