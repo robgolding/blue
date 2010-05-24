@@ -309,6 +309,10 @@ section#home_blog h1 {
 	background-image: url("../img/icons/gentleface/notepad.png");
 }
 
+section.post h1 {
+	text-decoration: none;
+}
+
 /* @end */
 
 /* @group Elsewhere */

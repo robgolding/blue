@@ -4,10 +4,9 @@
 		<?php if (have_posts()) : ?>
 			
 			<?php while (have_posts()) : the_post(); ?>
-				<section class="grid_8">
+				<section class="grid_8" id="post-<?php the_ID(); ?>">
 					<h1><?php the_title(); ?></h1>
-			
-					<div class="post" id="post-<?php the_ID(); ?>">
+					
 					<?php the_content('Read the rest of this entry &raquo;'); ?>
 					
 					<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>

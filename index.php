@@ -6,16 +6,13 @@
 			<?php $first = true; ?>
 			
 			<?php while (have_posts()) : the_post(); ?>
-				<section class="grid_8">
+				<section class="grid_8" id="post-<?php the_ID(); ?>">
 					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-				
-					<div class="post" id="post-<?php the_ID(); ?>">
-						<p class="meta"><?php the_time('F jS, Y') ?> by <strong><?php the_author() ?></strong></p>
+					<p class="meta"><?php the_time('F jS, Y') ?> by <strong><?php the_author() ?></strong></p>
 
-						<?php the_content('Read the rest of this entry &raquo;'); ?>
+					<?php the_content('Read the rest of this entry &raquo;'); ?>
 
-						<p><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-					</div>
+					<p><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 				</section>
 				<?php if ($first) : $first = false; ?>
 					<section class="grid_4">
