@@ -60,6 +60,7 @@ section h1 {
 	font-size: 32px;
 	margin: 1em 0 0.3em;
 	text-shadow: #fff 0 1px 0;
+	font-family: "FontinSansRegular", sans-serif;
 }
 
 section h2 {
@@ -195,11 +196,11 @@ hr {
 }
 
 #masthead h1 {
-	margin: 40px 10px 0 10px;
+	margin: 25px 10px 0 10px;
 	float: left;
 	font-size: 72px;
 	width: 500px;
-	font-family: "FontinSansBold", sans-serif;
+	font-family: "FontinSansRegular", sans-serif;
 }
 
 #masthead h1 a, #masthead h1 a:visited, #masthead h1 a:hover {
@@ -213,6 +214,14 @@ hr {
 #masthead h1 a:hover {
 	text-decoration: none;
 	color: auto;
+}
+
+#masthead span {
+	display: block;
+	clear: left;
+	text-indent: 44px;
+	font-size: 22px;
+	font-family: "Museo300Regular", sans-serif;
 }
 
 #masthead #nav_primary {
