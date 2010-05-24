@@ -30,10 +30,29 @@ html, body {
 	background-color: #c2efff;
 	font-family: "FontinRegular", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	color: #586c78;
 	font-weight: 300;
 	font-size: 100%;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	overflow: auto;
+	padding-bottom: 130px;  /* footer height + some extra */
+}
+
+/*Opera footer Fix*/
+body:before {
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px;/* thank you Erik J - negate effect of float*/
 }
 
 section h1 {
@@ -206,8 +225,8 @@ hr {
 
 /* @group Elsewhere */
 
-#elsewhere 						{ padding-top: 20px; }
-#elsewhere span					{ float: left; padding-top: 21px; }
+#elsewhere 						{ height: 50px; background: #efefff; margin-top: 20px; border: 1px solid #ccc; -webkit-box-shadow: 2px 2px 2px #bbb; -webkit-border-radius: 8px; -moz-box-shadow: 2px 2px 2px #bbb; -moz-border-radius: 8px; box-shadow: 2px 2px 2px #bbb; border-radius: 8px;}
+#elsewhere section.title		{ font-size: 28px; font-family: "Museo300Regular", sans-serif; margin-top: 12px; }
 #elsewhere ul 					{ list-style: none; padding: 0; width: 245px; margin: 0 auto; }
 #elsewhere ul li 				{ display: inline; }
 #elsewhere ul li a				{ height: 0; padding-top: 32px; overflow: hidden; float: left; width: 32px; border: 0; margin-right: 3px; background: url("../img/icons/social/email_32.png") left center no-repeat; }
@@ -218,22 +237,24 @@ hr {
 #elsewhere ul li.twitter a		{ background-image: url("../img/icons/social/twitter_32.png"); }
 #elsewhere ul li.technorati a	{ background-image: url("../img/icons/social/technorati_32.png"); }
 #elsewhere ul li.bitbucket a	{ background-image: url("../img/icons/social/bitbucket_32.png"); }
+#elsewhere ul li.github a		{ background-image: url("../img/icons/social/github_32.png"); }
 
 /* @end */
 
 #portrait {
-	margin-top: 40px;
+	position: relative;
+	bottom: 20px;
 }
 
 /* @group Footer */
 
 body>footer {
+	background-color: #daeeff;
+	border-top: 1px solid #ccc;
 	position: relative;
+	margin-top: -100px; /* negative value of footer height */
 	height: 100px;
-	margin: -100px 0 0 0;
-	clear: both;
-	background: #eee;
-	border-top: 1px solid #ddd;
+	clear:both;
 }
 
 body>footer #copyright {
