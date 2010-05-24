@@ -1,0 +1,11 @@
+/*
+Theme Name: Blue
+Theme URI: http://www.robgolding.com
+Description: The new blue theme for robgolding.com
+Author: Rob Golding
+Author URI: http://www.robgolding.com
+*/
+
+@import "style/reset.css";
+@import "style/960.css";
+@import "style/style.css";
