@@ -5,6 +5,11 @@
 }
 
 @font-face {
+	font-family: 'FontinItalic';
+	src: url('../type/Fontin-Italic.otf');
+}
+
+@font-face {
 	font-family: 'FontinSansRegular';
 	src: url('../type/Fontin_Sans_R_45b.otf');
 }
@@ -15,6 +20,11 @@
 }
 
 @font-face {
+	font-family: 'FontinSansItalic';
+	src: url('../type/Fontin_Sans_I_45b.otf');
+}
+
+@font-face {
 	font-family: 'Museo100Regular';
 	src: url('../type/Museo100-Regular.otf');
 }
@@ -22,6 +32,16 @@
 @font-face {
 	font-family: 'Museo300Regular';
 	src: url('../type/Museo300-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Museo500Regular';
+	src: url('../type/Museo500-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Museo700Regular';
+	src: url('../type/Museo700-Regular.otf');
 }
 
 /* @group General */
@@ -132,14 +152,18 @@ hr {
 
 /* @group Navigation */
 
-#nav_wrap {
-	padding-top: 10px;
+#nav_primary {
+	margin: 50px 0 0 0;
+	float: right;
+	width: 490px;
 }
 
 #nav_primary ul {
 	list-display: none;
 	margin: 0;
 	padding: 0;
+	float: right;
+	margin-right: 20px;
 }
 
 #nav_primary ul li {
@@ -148,7 +172,9 @@ hr {
 	float: left;
 	margin: 0;
 	padding: 0;
-	margin-left: 40px;
+	margin-left: 18px;
+	width: 100px;
+	border-bottom: 1px solid #999;
 }
 
 #nav_primary ul li:first-child {
@@ -161,12 +187,31 @@ hr {
 	font-size: 20px;
 	font-family: "Museo300Regular", sans-serif;
 	color: #666;
-	border-bottom: 1px solid #999;
 }
 
 #nav_primary ul li a:hover {
 	color: #333;
+}
+
+#nav_primary ul li:hover {
 	border-bottom-color: #666;
+}
+
+#nav_primary ul li.current a {
+	font-family: "Museo700Regular", sans-serif;
+	text-shadow: #fff 0 1px 0;
+}
+
+#nav_primary ul li a h2 {
+	font-weight: 100;
+}
+
+#nav_primary ul li a h3 {
+	font-size: 12px;
+	font-family: 'FontinItalic', serif;
+	font-style: italic;
+	font-weight: 100;
+	margin: 0;
 }
 
 /* @end */
@@ -199,8 +244,9 @@ hr {
 	margin: 25px 10px 0 10px;
 	float: left;
 	font-size: 72px;
-	width: 500px;
+	width: 430px;
 	font-family: "FontinSansRegular", sans-serif;
+	font-weight: 100;
 }
 
 #masthead h1 a, #masthead h1 a:visited, #masthead h1 a:hover {
@@ -222,12 +268,6 @@ hr {
 	text-indent: 44px;
 	font-size: 22px;
 	font-family: "Museo300Regular", sans-serif;
-}
-
-#masthead #nav_primary {
-	margin: 40px 40px 0 0;
-	float: right;
-	width: 350px;
 }
 
 /* @end */
