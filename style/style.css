@@ -311,6 +311,7 @@ section#home_blog h1 {
 
 section.post h1 a, section.post h1 a:link, section.post h1 a:visited {
 	border: 0;
+	color: inherit;
 }
 
 /* @end */
