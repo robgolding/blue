@@ -47,7 +47,7 @@
 /* @group General */
 
 html, body {
-	background-color: #c2efff;
+	background-color: #d2e2ff;
 	font-family: "FontinRegular", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	height: 100%;
 	min-height: 100%;
@@ -227,8 +227,10 @@ hr {
 	padding: 0;
 	position: relative;
 /*	background: rgba(220, 220, 220, 0.5);*/
-	background-color: #daeeff;
-	border-bottom: 1px solid #ccc;
+/*	background-color: #daeeff;*/
+	background-color: #e0ebff;
+	border-bottom: 1px solid #aaa;
+	-webkit-box-shadow: 0 1px #eee;
 }
 
 #masthead {
@@ -251,7 +253,8 @@ hr {
 
 #masthead h1 a, #masthead h1 a:visited, #masthead h1 a:hover {
 	display: block;
-	color: #0599ee;
+	color: #2577ee;
+	text-shadow: #fff 1px 1px;
 	text-decoration: none;
 /*	text-indent: -9999px;*/
 /*	background: url(../img/masthead_berlin_2010.png) no-repeat right center;*/
@@ -268,6 +271,7 @@ hr {
 	text-indent: 44px;
 	font-size: 22px;
 	font-family: "Museo300Regular", sans-serif;
+	color: #BD1550;
 }
 
 /* @end */
@@ -328,8 +332,9 @@ section#home_blog h1 {
 /* @group Footer */
 
 body>footer {
-	background-color: #daeeff;
-	border-top: 1px solid #ccc;
+	background-color: #e0ebff;
+	border-top: 1px solid #aaa;
+	-webkit-box-shadow: 0 -1px #eee;
 	position: relative;
 	margin-top: -100px; /* negative value of footer height */
 	height: 100px;
