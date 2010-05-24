@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	
 	<div id="main">
-		<?php query_posts($query_string . '&cat=-27'); ?>
 		<?php if (have_posts()) : ?>
 			
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>

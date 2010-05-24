@@ -8,14 +8,15 @@ if ( function_exists('register_sidebar') ) {
    ));
 }
 
-function exclude_projects_from_rss($query) {
-	if ($query->is_feed) {
-		$query->set('cat','-27');
+function exclude_projects($query) {
+	if ($query->is_feed || $query->is_home || $query->is_archive) {
+		if ($query->query_vars['cat'] != '27')
+			$query->set('cat','-27');
 	}
 	
 	return $query;
 }
 
-add_filter('pre_get_posts', 'exclude_projects_from_rss');
+add_filter('pre_get_posts', 'exclude_projects');
 
 ?>

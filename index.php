@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	
 	<div class="container_12">
-		<?php query_posts($query_string . '&cat=-27'); ?>
 		<?php if (have_posts()) : ?>
 			
 			<?php $first = true; ?>
