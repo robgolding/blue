@@ -21,7 +21,7 @@
 
 <?php if ($comments) : ?>
 
-	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
 	
 	<div class="comments">
 	
@@ -66,7 +66,7 @@
 
 <?php if ('open' == $post->comment_status) : ?>
 
-<h3 id="respond">Leave a Reply</h3>
+<h2 id="respond">Leave a Reply</h2>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>

@@ -329,6 +329,22 @@ section.post h1 a, section.post h1 a:link, section.post h1 a:visited {
 	color: inherit;
 }
 
+section#sidebar {
+}
+
+section#sidebar ul {
+	list-style: none;
+}
+
+section#sidebar .widget_twitter .entry-meta {
+	font-size: 12px;
+}
+
+section#sidebar .widget_twitter h2.widgettitle a {
+	color: inherit;
+	border: 0;
+}
+
 /* @end */
 
 /* @group Elsewhere */
