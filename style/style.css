@@ -149,6 +149,10 @@ hr {
 	background-color: #dff6ff;
 }
 
+pre { font-family: 'andale mono', 'lucida console', monospace; font-size: 14px; line-height: 1.5; color: #000; overflow: auto; background-color: #efefff; border-top: 1px solid #ccc; border-bottom: 3px solid #ccc; padding: 10px 20px; }
+
+code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0.8em; }
+
 /* @end */
 
 /* @group Navigation */
