@@ -157,12 +157,13 @@ hr {
 	height: 150px;
 	overflow: hidden;
 	width: 100%;
-	background: url(../img/masthead_bg.png) repeat-x left 0;
-	margin: 0;
+/*	background: url(../img/masthead_bg.png) repeat-x left 0;*/
+	margin: 0 auto;
 	padding: 0;
 	position: relative;
-/*	background: rgba(255, 255, 255, 0.5);*/
-	border-bottom: 1px solid #888;
+/*	background: rgba(220, 220, 220, 0.5);*/
+	background-color: #daeeff;
+	border-bottom: 1px solid #ccc;
 }
 
 #masthead {
@@ -178,7 +179,7 @@ hr {
 	margin: 40px 10px 0 10px;
 	float: left;
 	font-size: 72px;
-
+	width: 500px;
 	font-family: "FontinSansBold", sans-serif;
 }
 
@@ -193,6 +194,50 @@ hr {
 #masthead h1 a:hover {
 	text-decoration: none;
 	color: auto;
+}
+
+#masthead #nav_primary {
+	margin: 40px 40px 0 0;
+	float: right;
+	width: 350px;
+}
+
+/* @end */
+
+/* @group Elsewhere */
+
+#elsewhere 						{ padding-top: 20px; }
+#elsewhere span					{ float: left; padding-top: 21px; }
+#elsewhere ul 					{ list-style: none; padding: 0; width: 245px; margin: 0 auto; }
+#elsewhere ul li 				{ display: inline; }
+#elsewhere ul li a				{ height: 0; padding-top: 32px; overflow: hidden; float: left; width: 32px; border: 0; margin-right: 3px; background: url("../img/icons/social/email_32.png") left center no-repeat; }
+#elsewhere ul li.lastfm a		{ background-image: url("../img/icons/social/lastfm_32.png"); }
+#elsewhere ul li.facebook a		{ background-image: url("../img/icons/social/facebook_32.png"); }
+#elsewhere ul li.flickr a		{ background-image: url("../img/icons/social/flickr_32.png"); }
+#elsewhere ul li.linkedin a		{ background-image: url("../img/icons/social/linkedin_32.png"); }
+#elsewhere ul li.twitter a		{ background-image: url("../img/icons/social/twitter_32.png"); }
+#elsewhere ul li.technorati a	{ background-image: url("../img/icons/social/technorati_32.png"); }
+#elsewhere ul li.bitbucket a	{ background-image: url("../img/icons/social/bitbucket_32.png"); }
+
+/* @end */
+
+#portrait {
+	margin-top: 40px;
+}
+
+/* @group Footer */
+
+body>footer {
+	position: relative;
+	height: 100px;
+	margin: -100px 0 0 0;
+	clear: both;
+	background: #eee;
+	border-top: 1px solid #ddd;
+}
+
+body>footer #copyright {
+	margin-top: 30px;
 }
 
 /* @end */
