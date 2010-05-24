@@ -207,6 +207,21 @@ code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0
 	text-shadow: #fff 0 1px 0;
 }
 
+body#cv #nav_primary #nav_cv a {
+	font-family: "Museo700Regular", sans-serif;
+	text-shadow: #fff 0 1px 0;
+}
+
+body#projects #nav_primary #nav_projects a {
+	font-family: "Museo700Regular", sans-serif;
+	text-shadow: #fff 0 1px 0;
+}
+
+body#blog #nav_primary #nav_blog a {
+	font-family: "Museo700Regular", sans-serif;
+	text-shadow: #fff 0 1px 0;
+}
+
 #nav_primary ul li a h2 {
 	font-weight: 100;
 }
