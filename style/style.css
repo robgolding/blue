@@ -370,6 +370,37 @@ section#sidebar .widget_twitter h2.widgettitle a {
 	bottom: 20px;
 }
 
+/* @group Comments */
+
+#comments h2 {
+	margin-bottom: 20px;
+}
+
+#comments .comment {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #bbb;
+}
+
+#comments .comment .text {
+	clear: left;
+}
+
+#comments .comment .meta {
+	padding-top: 1px;
+}
+
+#comments .comment .meta p {
+	margin-top: 15px;
+}
+
+#comments .comment .meta img.avatar {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+
+/* @end */
+
 /* @group Footer */
 
 body>footer {

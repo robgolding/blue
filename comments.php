@@ -20,30 +20,36 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
 	
-	<div class="comments">
+	<div id="comments">
+	
+	<h2><?php comments_number('No Responses', 'One Response', '% Responses' );?> to <?php the_title(); ?></h2>
 	
 	<?php $first = true; ?>
 	
 	<?php foreach ($comments as $comment) : ?>
 
 		<div class="comment <?php if ($first) { echo 'first'; } ?>" id="comment-<?php comment_ID() ?>">
-			<?php echo get_avatar( $comment, 64 ); ?>
-			<div class="author">
-			<cite>
-				<?php if ($comment->user_id) { 
-					$user=get_userdata($comment->user_id); echo $user->display_name;
-				} else { 
-					comment_author_link();
-				} ?>
-			</cite> says:</div>
-			<?php if ($comment->comment_approved == '0') : ?>
-			<p><strong>Your comment is awaiting moderation.</strong></p>
-			<?php endif; ?>
-			<p class="meta"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></p>
-			<?php comment_text() ?>
+			<div class="meta">
+				<?php echo get_avatar( $comment, 96 ); ?>
+				<p>
+					<?php if ($comment->user_id) { 
+						$user=get_userdata($comment->user_id); echo $user->display_name;
+					} else { 
+						comment_author_link();
+					} ?>
+				</p>
+				<p>
+					<?php comment_date('F jS, Y') ?> at <?php comment_time() ?> <?php edit_comment_link('edit &rarr;','',''); ?>
+				</p>
+			</div>
+			<div class="text">
+				<?php if ($comment->comment_approved == '0') : ?>
+					<p><strong>Your comment is awaiting moderation.</strong></p>
+				<?php endif; ?>
+				<p class="meta"></p>
+				<?php comment_text() ?>
+			</div>
 		</div>
 		
 		<?php $first = false; ?>
