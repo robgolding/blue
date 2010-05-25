@@ -329,6 +329,21 @@ section.post h1 a, section.post h1 a:link, section.post h1 a:visited {
 	color: inherit;
 }
 
+section.post .meta {
+	font-size: 14px;
+	color: #888;
+}
+
+section.post img.alignleft {
+	float: left;
+	margin: 0 10px 5px 0;
+}
+
+section.post img.alignright {
+	float: right;
+	margin: 0 0 5px 10px	;
+}
+
 section#sidebar {
 }
 
