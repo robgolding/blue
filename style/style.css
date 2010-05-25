@@ -153,6 +153,10 @@ pre { font-family: 'andale mono', 'lucida console', monospace; font-size: 14px; 
 
 code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0.8em; }
 
+.error {
+	color: #cc0404;
+}
+
 /* @end */
 
 /* @group Navigation */

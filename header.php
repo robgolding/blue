@@ -69,7 +69,7 @@
 							<li id="nav_cv"><a href="/cv/"><h2>CV</h2><h3>my r&eacute;sum&eacute;</h3></a></li>
 							<li id="nav_projects"><a href="/projects/"><h2>Projects</h2><h3>in my spare time</h3></a></li>
 							<li id="nav_blog"><a href="/blog/"><h2>Blog</h2><h3>technical writings</h3></a></li>
-							<li id="nav_contact"><div id="nav_contact_nojava"><h2 class="error">Contact</h2><h3>javascript required</h3></a></div>
+							<li id="nav_contact"><div id="nav_contact_nojava"><h2><a>Contact</h2><h3 class="error">javascript required</h3></a></div>
 								<script language="JavaScript" type="text/JavaScript">
 									var noJava=eval('document.getElementById(\'nav_contact_nojava\')')
 									noJava.style.display = 'none';
