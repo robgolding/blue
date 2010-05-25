@@ -19,9 +19,10 @@
 
 <!-- You can start editing here. -->
 
+<div id="comments">
+
 <?php if ($comments) : ?>
 	
-	<div id="comments">
 	
 	<h2><?php comments_number('No Responses', 'One Response', '% Responses' );?> to <?php the_title(); ?></h2>
 	
@@ -56,8 +57,6 @@
 
 	<?php endforeach; /* end for each comment */ ?>
 	
-	</div>
-	
  <?php else : // this is displayed if there are no comments so far ?>
 	
 	<?php if ('open' == $post->comment_status) : ?>
@@ -70,56 +69,60 @@
 	<?php endif; ?>
 <?php endif; ?>
 
+</div> <!-- /comments -->
+
 <?php if ('open' == $post->comment_status) : ?>
 
-<h2 id="respond">Leave a Reply</h2>
+<div id="comments_reply" <?php if ($comments) : ?> style="border-top: 0" <?php endif; ?>>
 
-<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
-<?php else : ?>
+	<h2>Leave a Reply</h2>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+	<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
+		<p>
+			You must be
+			<a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a>
+			to post a comment.
+		</p>
+	<?php else : ?>
+		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
-<div class="form comments-form">
+		<div class="form comments-form">
 
-<?php if ( $user_ID ) : ?>
+			<?php if ( $user_ID ) : ?>
 
-	<p class="meta">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
+				<p class="meta">
+					Logged in as
+					<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
+					<a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a>
+				</p>
+			<?php else : ?>
+				<div class="field-wrapper">
+					<div class="label"><label for="author">Name <?php if ($req) echo "*"; ?></label></div>
+					<div class="field"><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> /></div>
+				</div>
 
-<?php else : ?>
-	<div class="comments">
-		<div class="field-wrapper">
-			<div class="label"><label for="author">Name <?php if ($req) echo "(required)"; ?></label></div>
-			<div class="field"><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> /></div>
+				<div class="field-wrapper">
+					<div class="label"><label for="email">Mail <?php if ($req) echo "*"; ?></label></div>
+					<div class="field"<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> /></div>
+				</div>
+
+				<div class="field-wrapper">
+					<div class="label"><label for="url">Website</label></div>
+					<div class="field"><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" /></div>
+				</div>
+			<?php endif; ?>
+				<!-- <p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p> -->
+				<div class="field-wrapper">
+					<div class="field"><textarea name="comment" id="comment" cols="70%" rows="10" tabindex="4"></textarea></div>
+					<div class="help"><a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown Syntax" target="_blank">Markdown syntax</a>
+					is supported in comments, just indent code with four spaces.</div>
+				</div>
+
+				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+				<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+				<?php do_action('comment_form', $post->ID); ?>
 		</div>
-	
-		<div class="field-wrapper">
-			<div class="label"><label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label></div>
-			<div class="field"<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> /></div>
-		</div>
-
-		<div class="field-wrapper">
-			<div class="label"><label for="url">Website</label></div>
-			<div class="field"><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" /></div>
-		</div>
-	</div>
-<?php endif; ?>
-	<div class="comments">
-		<!-- <p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p> -->
-
-		<div class="field-wrapper">
-			<div class="label"><label for="comment">Comment</label></div>
-			<div class="field"><textarea name="comment" id="comment" cols="70%" rows="10" tabindex="4"></textarea></div>
-			<div class="help"><a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown Syntax" target="_blank">Markdown syntax</a> is supported in comments, just indent code with four spaces.</div>
-		</div>
-
-		<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-		<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-		<?php do_action('comment_form', $post->ID); ?>
-	</div>
-
-</form>
-</div>
-<?php endif; // If registration required and not logged in ?>
+		</form>
+	<?php endif; // If registration required and not logged in ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>

@@ -410,6 +410,11 @@ section#sidebar .widget_twitter h2.widgettitle a {
 
 /* @group Comments */
 
+#comments {
+	border-top: 1px solid #bbb;
+	margin-top: 30px;
+}
+
 #comments h2 {
 	margin-bottom: 20px;
 }
@@ -436,6 +441,15 @@ section#sidebar .widget_twitter h2.widgettitle a {
 	float: left;
 	margin: 0 20px 10px 0;
 }
+
+#comments_reply .field-wrapper { padding: 10px 0; }
+#comments_reply .field-wrapper input { font-size: 14px; padding: 3px; width: 300px; border: 1px solid #888; }
+#comments_reply .field-wrapper .label { font-size: 14px; margin-bottom: 2px; padding-left: 3px; }
+#comments_reply .field-wrapper textarea { font-size: 14px; padding: 3px; width: 450px; max-width: 450px; border: 1px solid #888; }
+#comments_reply .field-wrapper div.help { color: #666; font-size: 0.8em; }
+
+div.sexy-bookmarks { padding-bottom: 30px; }
+div.sexy-bookmarks ul li a { border: 0; }
 
 /* @end */
 
