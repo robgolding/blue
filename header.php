@@ -54,7 +54,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
+		<!--[if IE]><script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/html5.js"></script><![endif]-->
 		
 		<?php wp_head(); ?>
 		
