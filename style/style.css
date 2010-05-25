@@ -351,8 +351,31 @@ section#sidebar ul {
 	list-style: none;
 }
 
+section#sidebar .widget_twitter ul li {
+	border-bottom: 1px dotted #aaa;
+	padding: 5px 0 5px 0;
+}
+
+section#sidebar .widget_twitter .entry-content {
+	font-size: 14px;
+}
+
 section#sidebar .widget_twitter .entry-meta {
 	font-size: 12px;
+	color: #999;
+}
+
+section#sidebar .widget_twitter .entry-meta a:link, section#sidebar .widget_twitter .entry-meta a:visited {
+	border-bottom: 1px dotted #ED4580;
+	color: #ED4580;
+}
+
+section#sidebar .widget_twitter .entry-meta a:hover {
+	border-bottom: 1px solid #ED4580;
+}
+
+section#sidebar .widget_twitter .in-reply-to-meta {
+	margin-left: 5px;
 }
 
 section#sidebar .widget_twitter h2.widgettitle a {
