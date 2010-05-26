@@ -333,6 +333,16 @@ section.post h1 a, section.post h1 a:link, section.post h1 a:visited {
 	color: inherit;
 }
 
+section.post p {
+	margin: 1.2em 0;
+}
+
+section.post blockquote {
+	border: 1px solid #bbb;
+	border-width: 1px 0 1px 0;
+	padding-left: 30px;
+}
+
 section.post .meta {
 	font-size: 14px;
 	color: #888;
