@@ -184,6 +184,8 @@ code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0
 	margin-left: 18px;
 	width: 100px;
 	border-bottom: 1px solid #999;
+	background-position: 95% 5px;
+	background-repeat: no-repeat;
 }
 
 #nav_primary ul li:first-child {
@@ -209,6 +211,50 @@ code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0
 #nav_primary ul li.current a {
 	font-family: "Museo700Regular", sans-serif;
 	text-shadow: #fff 0 1px 0;
+}
+
+#nav_primary #nav_cv {
+	background-image: url("../img/icons/gentleface/menu/doc_lines_light.png");
+}
+
+#nav_primary #nav_cv:hover {
+	background-image: url("../img/icons/gentleface/menu/doc_lines_dark.png");
+}
+
+#nav_primary #nav_projects {
+	background-image: url("../img/icons/gentleface/menu/wrench_plus_light.png");
+}
+
+#nav_primary #nav_projects:hover {
+	background-image: url("../img/icons/gentleface/menu/wrench_plus_dark.png");
+}
+
+#nav_primary #nav_blog {
+	background-image: url("../img/icons/gentleface/menu/speechbubble_light.png");
+}
+
+#nav_primary #nav_blog:hover {
+	background-image: url("../img/icons/gentleface/menu/speechbubble_dark.png");
+}
+
+#nav_primary #nav_contact {
+	background-image: url("../img/icons/gentleface/menu/mail_2_light.png");
+}
+
+#nav_primary #nav_contact:hover {
+	background-image: url("../img/icons/gentleface/menu/mail_2_dark.png");
+}
+
+body#cv #nav_primary #nav_cv {
+	background-image: url("../img/icons/gentleface/menu/doc_lines_dark.png");
+}
+
+body#projects #nav_primary #nav_projects {
+	background-image: url("../img/icons/gentleface/menu/wrench_plus_dark.png");
+}
+
+body#blog #nav_primary #nav_blog {
+	background-image: url("../img/icons/gentleface/menu/speechbubble_dark.png");
 }
 
 body#cv #nav_primary #nav_cv a {
