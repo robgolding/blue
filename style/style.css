@@ -121,13 +121,13 @@ ul {
 	margin-left: 10px;
 }
 
-section a:link, section a:visited {
+#main a:link, #main a:visited {
 	border-bottom: 1px dotted #BD1550;
 	color: #BD1550;
 	text-decoration: none;
 }
 
-section a:hover {
+#main a:hover {
 	border-bottom: 1px solid #BD1550;
 }
 
@@ -463,11 +463,6 @@ section#sidebar .widget_twitter h2.widgettitle a {
 
 /* @end */
 
-#portrait {
-	position: relative;
-	bottom: 20px;
-}
-
 /* @group Comments */
 
 #comments {
@@ -507,6 +502,16 @@ section#sidebar .widget_twitter h2.widgettitle a {
 #comments_reply .field-wrapper .label { font-size: 14px; margin-bottom: 2px; padding-left: 3px; }
 #comments_reply .field-wrapper textarea { font-size: 14px; padding: 3px; width: 450px; max-width: 450px; border: 1px solid #888; }
 #comments_reply .field-wrapper div.help { color: #666; font-size: 0.8em; }
+
+#dsq-content a:hover { border-bottom: none; }
+#dsq-global-toolbar { display: none !important; }
+.dsq-login-buttons { background: none !important; margin-bottom: 0 !important; }
+#dsq-comments { font-size: 16px !important; }
+.dsq-brlink { display: none !important; }
+
+/* @end */
+
+/* @group Misc */
 
 div.sexy-bookmarks { padding-bottom: 30px; }
 div.sexy-bookmarks ul li a { border: 0; }

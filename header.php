@@ -48,13 +48,15 @@
 		
 		<meta name="description" content="<?php bloginfo('description') ?>" />
 		<?php if(is_search()) { ?>
-		<meta name="robots" content="noindex, nofollow" /> 
-	    <?php }?>
+			<meta name="robots" content="noindex, nofollow" /> 
+	    	<?php }?>
 		
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<!--[if IE]><script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/html5.js"></script><![endif]-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/global.js"></script>
 		
 		<?php wp_head(); ?>
 		
