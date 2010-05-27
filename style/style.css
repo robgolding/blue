@@ -81,6 +81,7 @@ section h1 {
 	margin: 1em 0 0.3em;
 	text-shadow: #fff 0 1px 0;
 	font-family: "FontinSansRegular", sans-serif;
+	line-height: 1.3em;
 }
 
 section h2 {
@@ -121,13 +122,13 @@ ul {
 	margin-left: 10px;
 }
 
-#main a:link, #main a:visited {
+a:link, a:visited {
 	border-bottom: 1px dotted #BD1550;
 	color: #BD1550;
 	text-decoration: none;
 }
 
-#main a:hover {
+a:hover {
 	border-bottom: 1px solid #BD1550;
 }
 
@@ -346,8 +347,7 @@ body#blog #nav_primary #nav_blog a {
 	color: #2577ee;
 	text-shadow: #fff 1px 1px;
 	text-decoration: none;
-/*	text-indent: -9999px;*/
-/*	background: url(../img/masthead_berlin_2010.png) no-repeat right center;*/
+	border: none;
 }
 
 #masthead h1 a:hover {
@@ -395,8 +395,13 @@ section#home_blog h1 {
 }
 
 section.post h1 a, section.post h1 a:link, section.post h1 a:visited {
-	border: 0;
 	color: inherit;
+	text-shadow: #fff 1px 1px;
+	border-bottom: 1px dotted #333;
+}
+
+section.post h1 a:hover {
+	border-bottom: 1px solid #333;
 }
 
 section.post p {
