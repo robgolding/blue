@@ -26,7 +26,7 @@ $(function() {
                 $morePosts.attr('href', url);
             } else {
                 var $message = $('<span class="small">There are no more posts</span>');
-                $('#older-posts').html($message);
+                $('#older-posts').append($message);
                 
                 $morePosts.unbind('click');
                 $morePosts.click(function() { return false });

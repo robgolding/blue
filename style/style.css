@@ -157,6 +157,26 @@ code { font-family: 'Courier New', Courier, monospace; color: #333; font-size: 0
 	color: #cc0404;
 }
 
+.disabled {
+	color: #bbb;
+	border: none;
+}
+
+a.disabled:hover {
+	border: none !important;
+	cursor: default;
+}
+
+.spinner {
+	margin-left: 1em;
+	position: relative;
+	top: 0.4em;
+}
+
+#main .small {
+	font-size: 0.8em;
+}
+
 /* @end */
 
 /* @group Navigation */
@@ -515,6 +535,10 @@ section#sidebar .widget_twitter h2.widgettitle a {
 
 div.sexy-bookmarks { padding-bottom: 30px; }
 div.sexy-bookmarks ul li a { border: 0; }
+
+#older-posts span {
+	margin-left: 20px;
+}
 
 /* @end */
 
