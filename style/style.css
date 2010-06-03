@@ -10,6 +10,11 @@
 }
 
 @font-face {
+	font-family: 'FontinBold';
+	src: url('../type/Fontin-Bold.otf');
+}
+
+@font-face {
 	font-family: 'FontinSansRegular';
 	src: url('../type/Fontin_Sans_R_45b.otf');
 }
@@ -134,6 +139,7 @@ a:hover {
 
 strong {
 	font-weight: 700;
+	font-family: "FontinBold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 em {
